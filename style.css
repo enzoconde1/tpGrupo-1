@@ -1,0 +1,307 @@
+body {
+    color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#E4F3FB;
+    margin:0;
+    padding:0;
+}
+
+body h3 {
+    color:#00638C;
+    text-align:center;
+}
+
+html {
+    font-size: 16px;
+
+    @media screen and (max-width: 540px){
+        font-size:12px;
+    }
+}
+
+nav {
+    display:flex;
+    flex-direction:row;
+    background-color:#00638C;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+
+nav img {
+    width:5rem;
+    height:auto;
+}
+
+nav ul {
+    list-style:none;
+    top:0%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    gap:2rem;
+    align-items:center;
+}
+
+nav ul li {
+    display:inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+#boton_donar {
+    background-color:#d98729;
+    border-radius:0.5rem;
+    padding:1rem;
+}
+
+#boton_adoptar {
+    background-color:#00638C;
+    border-radius:0.5rem;
+    border-color:#d98729;
+    border-width:1rem;
+    padding:1rem;
+}
+
+header {
+    background-image:url(images/backgrounds/fondo-nosotros.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    background-attachment:scroll;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: end;
+    height:50vh;
+    padding:2rem 10rem;
+}
+
+.container_header {
+    width:30vw;
+}
+
+.divider {
+    color: #FFFFFF;
+    padding:0;
+    margin:0;
+}
+
+#estadisticas {
+    color:#00638C;
+    background-color:#C6EAFF;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:3rem;
+}
+
+#container_datos {
+    display:flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items: center;
+    padding:2rem 1rem;
+}
+
+.datos {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+#sobrenosotros {
+    background-image:url(images/backgrounds/fondo-sobrenosotros.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    color: #FFFFFF;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 32rem;
+}
+
+#rescatados {
+    color:#00638C;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+#rescatados p {
+    color:black;
+}
+
+#fotoscaballos {
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap: 1rem;
+    margin-left:20rem;
+    margin-right:20rem;
+}
+
+#fotoscaballos img {
+    height:21rem;
+    width:20rem;
+}
+
+#colabora {
+    background-color:#C6EAFF;
+    color:#00638C;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+#container_colabora {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+}
+
+.tarjeta_colabora {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color: #E4F3FB;
+    border-radius: 1rem;
+    padding:1rem;
+}
+
+#container_pagos {
+    margin:1rem;
+}
+
+#container_pagos img {
+    height:2rem;
+    width:auto;
+}
+
+#container_equipo {
+    background-color:#C6EAFF;
+}
+
+#container_areas {
+    color:black;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:1rem;
+    align-items:center;
+}
+
+#container_voluntarios {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:3rem;
+}
+
+.tarjeta_areas h3 {
+    color:black;
+}
+
+.tarjeta_areas li {
+    list-style-type: none;
+}
+
+#texto_voluntarios {
+    color:black;
+    text-align:center;
+}
+
+#texto_voluntarios ul li {
+    list-style-type: none;
+}
+
+form {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: #00638C;
+}
+
+form input {
+    background-color:#C6EAFF;
+}
+
+#container_mapa_texto {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    gap:2rem;
+    align-items: center;
+    color: black;
+}
+
+#mapa {
+    height:15rem;
+    width:auto;
+    border: 0.15vw solid #d98729;
+}
+
+#puntos_de_contacto {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+}
+
+.tarjeta_encontranos {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:0;
+}
+
+footer {
+    background-image:url(images/backgrounds/fondo-footer.png);
+    background-color: #C6EAFF;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment:scroll;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+footer img {
+    height:10rem;
+    width:auto;
+}
+
+#container_footer {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+}
+
+#container_redes_footer {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#redes_footer img {
+    height:2rem;
+    width:auto;
+}
