@@ -289,11 +289,14 @@ nav img {
 }
 
 #fotoscaballos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
   gap: 1rem; /* Espacio entre las imágenes */
-  margin-left: 20rem;
-  margin-right: 20rem;
+  margin-left: 17vw;
+  margin-right: 17vw;
 }
 
 .image-container {
