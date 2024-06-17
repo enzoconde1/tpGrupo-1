@@ -20,25 +20,108 @@ window.onclick = function (event) {
   }
 };
 
-// VALIDACIÓN DE FORMULARIO DE CONTACTO
-// VALIDACION AL TOCAR FORM
-var nameInput = document.getElementById('name');
-nameInput.addEventListener('blur', function () {
-  nameValidation();
-});
-var phoneInput = document.getElementById('phone');
-phoneInput.addEventListener('blur', function () {
-  phoneValitaion();
-});
-var whyInput = document.getElementById('why');
-whyInput.addEventListener('blur', function () {
-  whyValitaion();
-});
+
+
+//VALIDACIONES DE FORMULARIO
+
+let formulario_voluntarios = document.getElementById('container_voluntarios');
+let formulario_adopcion ;
+let label = document.getElementsByClassName('mensajeError');
+
+formulario_voluntarios.addEventListener('submit', validacion=(e)=>{
+  e.preventDefault();
+  let name = document.getElementById('name_v');
+  let phone = document.getElementById('phone_v');
+  let text = document.getElementById('why_v');
+  let status = true; 
+
+
+  if(phoneValitaion(phone)!= ''){
+    status = false;
+    label[0].style.opacity = "1";
+
+    }else{
+      label[0].style.opacity = "0";
+    }
+
+    if(nameValidation(name)!= ''){
+      status = false;
+      label[1].style.opacity = "1";
+  
+      }else{
+        label[1].style.opacity = "0";
+      }
+
+      if(whyValitaion(text)!= ''){
+        status = false;
+        label[2].style.opacity = "1";
+    
+        }else{
+          label[2].style.opacity = "0";
+        }
+ 
+})
+
+
+// VALIDACION DE TELEFONO
+function phoneValitaion(phone) {
+  // var phoneLabel = document.querySelector('label[for="phone"]');
+  // let mensajeError = document.getElementById('mensajeError2');
+  var phoneHasLetters = /[a-zA-Z]/.test(phone);
+  var phoneHasSpecialChars = /[^\w\s]/.test(phone);
+
+  var phoneError ='';
+
+  if (phone === '') {
+    phoneError = 'Ingresa un telefono.';
+  } else if (phoneHasLetters) {
+    phoneError = 'No debe contener letras.';
+  } else if (phoneHasSpecialChars) {
+    phoneError = 'No debe contener caracteres especiales.';
+  } else {
+    phoneError = '';
+  }
+
+  return phoneError;
+}
+
+
+// VALIDACION DE MENSAJE
+function whyValitaion(why) {
+  // var why = whyInput.value;
+  // var whyLabel = document.querySelector('label[for="why"]');
+  // let mensajeError = document.getElementById('mensajeError3');
+    var whyError = why === '' || why.lenght== 0 ? 'Ingrese su razon.' : '';
+
+
+    return whyError;
+
+  // if(whyError !== ''){
+  //   mensajeError.textContent = nameError;
+  //   mensajeError.style.opacity = 1;
+  // } else{
+  //   mensajeError.style.opacity = 0;
+  // }
+  
+
+  // if (whyError !== '') {
+  //   whyLabel.style.color = 'red';
+  //   whyLabel.textContent = 'Razon - ' + whyError;
+  // } else {
+  //   whyLabel.style.color = '#fff';
+  //   whyLabel.textContent = '¿Por qué te gustaría ser voluntario?';
+  // }
+}
+
 
 // VALIDACION DE NOMBRE
-function nameValidation() {
-  var name = nameInput.value;
-  var nameLabel = document.querySelector('label[for="name"]');
+
+
+
+function nameValidation(name) {
+  // var name = nameInput.value;
+  // var nameLabel = document.querySelector('label[for="name"]');
+  // let mensajeError = document.getElementById('mensajeError1');
 
   var nameHasNumbers = /\d/.test(name);
   var nameHasSpecialChars = /[^\w\s]/.test(name);
@@ -55,58 +138,17 @@ function nameValidation() {
     nameError = '';
   }
 
-  if (nameError !== '') {
-    nameLabel.style.color = 'red';
-    nameLabel.textContent = 'Nombre y Apellido - ' + nameError;
-  } else {
-    nameLabel.style.color = '#fff';
-    nameLabel.textContent = 'Nombre';
-  }
+  return nameError;
+  // if (nameError !== '') {
+  //   // nameLabel.style.color = 'red';
+  //   // nameLabel.textContent = 'Nombre y Apellido - ' + nameError;
+  //   mensajeError.textContent = nameError;
+  //   mensajeError.style.opacity = 1;
+  // } else{
+  //   mensajeError.style.opacity = 0;
+  // }
+  // else {
+  //   nameLabel.style.color = '#fff';
+  //   nameLabel.textContent = 'Nombre';
+  // }
 }
-
-// VALIDACION DE TELEFONO
-function phoneValitaion() {
-  var phone = phoneInput.value;
-  var phoneLabel = document.querySelector('label[for="phone"]');
-
-  var phoneHasLetters = /[a-zA-Z]/.test(phone);
-  var phoneHasSpecialChars = /[^\w\s]/.test(phone);
-
-  var phoneError;
-
-  if (phone === '') {
-    phoneError = 'Ingresa un telefono.';
-  } else if (phoneHasLetters) {
-    phoneError = 'No debe contener letras.';
-  } else if (phoneHasSpecialChars) {
-    phoneError = 'No debe contener caracteres especiales.';
-  } else {
-    phoneError = '';
-  }
-
-  if (phoneError !== '') {
-    phoneLabel.style.color = 'red';
-    phoneLabel.textContent = 'Telefono - ' + phoneError;
-  } else {
-    phoneLabel.style.color = '#fff';
-    phoneLabel.textContent = 'Telefono: ';
-  }
-}
-
-// VALIDACION DE MENSAJE
-function whyValitaion() {
-  var why = whyInput.value;
-  var whyLabel = document.querySelector('label[for="why"]');
-
-  var whyError = why === '' ? 'Ingrese su razon.' : '';
-
-  if (whyError !== '') {
-    whyLabel.style.color = 'red';
-    whyLabel.textContent = 'Razon - ' + whyError;
-  } else {
-    whyLabel.style.color = '#fff';
-    whyLabel.textContent = '¿Por qué te gustaría ser voluntario?';
-  }
-}
-
-

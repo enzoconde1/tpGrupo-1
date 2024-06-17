@@ -655,7 +655,8 @@ footer img {
 
 }
 #container_voluntarios label{
-  padding: 14px 0;
+  /* padding: 14px 0; */
+  padding-bottom: 14px;
   width: 100%;
   text-align: start;
 }
@@ -670,7 +671,11 @@ border: 1px solid #fff;
 outline: none;
 }
 
-
+.mensajeError{
+  color: red;
+  font-size: 15px;
+  opacity: 0;
+}
 #container_voluntarios textarea {
   height: 79.56px ;
 }

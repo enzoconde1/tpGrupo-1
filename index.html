@@ -257,23 +257,40 @@
         </div>
         <div id="container_voluntarios">
           <img src="images/img_voluntariado.png" alt="img_voluntariado" />
-          <form>
+          <form id="form_voluntarios" action="/#container_voluntarios"> 
             <label for="name">Nombre y Apellido:</label>
-            <input
+            <!-- <input
               type="text"
               id="name"
               name="name"
               oninput="nameValidation()"
-            />
-            <label for="phone">Teléfono :</label>
+            /> -->
             <input
+            type="text"
+            id="name_v"
+            name="name"
+            
+          />
+            <span class="mensajeError " id="mensajeError1">Complete el campo</span>
+            <label for="phone">Teléfono :</label>
+            <!-- <input
               type="text"
               id="phone"
               name="phone"
               oninput="phoneValidation()"
+            /> -->
+            <input
+              type="text"
+              id="phone_v"
+              name="phone"
+           
             />
+            <span class="mensajeError" id="mensajeError2">Complete el campo</span>
             <label for="why">Por qué te gustaría ser voluntario?</label>
-            <textarea id="why" name="why" oninput="whyValidation()"></textarea>
+            <!-- <textarea id="why" name="why" oninput="whyValidation()"></textarea> -->
+            <textarea id="why_v" name="why"></textarea>
+
+            <span class="mensajeError" id="mensajeError3">Complete el campo</span>
             <button type="submit" id="boton_form">Enviar</button>
           </form>
         </div>
