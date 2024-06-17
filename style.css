@@ -24,6 +24,15 @@ body h3 {
   text-align: center;
 }
 
+.subtitle h3 {
+  margin-block-end: 0;
+}
+
+.subtitle p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 html {
   font-size: 16px;
 
@@ -435,4 +444,31 @@ footer img {
 
 .tarjeta_eventos button:hover {
   background-color: #0056b3;
+}
+
+#container_tarjetas_denuncias {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tarjeta_denuncias {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta_denuncias h3 {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.tarjeta_denuncias p {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.5;
 }
