@@ -5,6 +5,12 @@ body {
   margin: 0;
   padding: 0;
 }
+.container{
+  width: 100%;
+  max-width: 85%;
+  margin: 0 auto;
+
+}
 
 body h3 {
   color: #00638c;
@@ -25,17 +31,27 @@ html {
   }
 }
 
+/*header*/
+header{
+  width: 100%;
+  background-color: #00638c;
+}
 nav {
   display: flex;
   flex-direction: row;
-  background-color: #00638c;
   justify-content: space-between;
-  padding: 0 10rem;
+  align-items: center;
+  height: 80px;
+}
+#burger-icon{
+  display: none;
+}
+#burger-icon.active{
+  display: block;
 }
 
 nav img {
-  width: 5rem;
-  height: auto;
+  width:  78px;
 }
 
 nav ul {
@@ -44,34 +60,39 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  gap: 2rem;
+  gap: 1.4rem;
   align-items: center;
 }
 
-nav ul li {
+.menu-item {
   display: inline;
 }
 
-nav ul li a {
+.menu-item a {
   text-decoration: none;
   color: #ffffff;
-}
 
-#boton_donar {
-  background-color: #d98729;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  
+}
+.menu-item a:hover{
+  text-decoration: underline;
 }
 
 #boton_adoptar {
-  background-color: #00638c;
-  border-radius: 0.5rem;
-  border-color: #d98729;
-  border-width: 1rem;
-  padding: 1rem;
+  background-color: #d98729;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+  width: 109px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-header {
+
+
+#banner_index {
   background-image: url(images/backgrounds/fondo-nosotros.png);
   background-repeat: no-repeat;
   background-position: center center;
