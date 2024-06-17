@@ -57,116 +57,34 @@ window.onclick = function (event) {
   }
 };
 
+// VALIDACION AL TOCAR FORM
+var nameInput = document.getElementById('name_v');
+let nameInputError = document.getElementById('mensajeErrorName');
+nameInput.addEventListener('blur', function () {
+  nameValidation();
+});
 
+var phoneInput = document.getElementById('phone_v');
+let phoneInputError = document.getElementById('mensajeErrorPhone');
+phoneInput.addEventListener('blur', function () {
+  phoneValidation();
+});
 
-//VALIDACIONES DE FORMULARIO
-
-let formulario_voluntarios = document.getElementById('container_voluntarios');
-let formulario_adopcion ;
-let label = document.getElementsByClassName('mensajeError');
-
-formulario_voluntarios.addEventListener('submit', validacion=(e)=>{
-  e.preventDefault();
-  let name = document.getElementById('name_v');
-  let phone = document.getElementById('phone_v');
-  let text = document.getElementById('why_v');
-  let status = true; 
-
-
-  if(phoneValitaion(phone)!= ''){
-    status = false;
-    label[0].style.opacity = "1";
-
-    }else{
-      label[0].style.opacity = "0";
-    }
-
-    if(nameValidation(name)!= ''){
-      status = false;
-      label[1].style.opacity = "1";
-  
-      }else{
-        label[1].style.opacity = "0";
-      }
-
-      if(whyValitaion(text)!= ''){
-        status = false;
-        label[2].style.opacity = "1";
-    
-        }else{
-          label[2].style.opacity = "0";
-        }
- 
-})
-
-
-// VALIDACION DE TELEFONO
-function phoneValitaion(phone) {
-  // var phoneLabel = document.querySelector('label[for="phone"]');
-  // let mensajeError = document.getElementById('mensajeError2');
-  var phoneHasLetters = /[a-zA-Z]/.test(phone);
-  var phoneHasSpecialChars = /[^\w\s]/.test(phone);
-
-  var phoneError ='';
-
-  if (phone === '') {
-    phoneError = 'Ingresa un telefono.';
-  } else if (phoneHasLetters) {
-    phoneError = 'No debe contener letras.';
-  } else if (phoneHasSpecialChars) {
-    phoneError = 'No debe contener caracteres especiales.';
-  } else {
-    phoneError = '';
-  }
-
-  return phoneError;
-}
-
-
-// VALIDACION DE MENSAJE
-function whyValitaion(why) {
-  // var why = whyInput.value;
-  // var whyLabel = document.querySelector('label[for="why"]');
-  // let mensajeError = document.getElementById('mensajeError3');
-    var whyError = why === '' || why.lenght== 0 ? 'Ingrese su razon.' : '';
-
-
-    return whyError;
-
-  // if(whyError !== ''){
-  //   mensajeError.textContent = nameError;
-  //   mensajeError.style.opacity = 1;
-  // } else{
-  //   mensajeError.style.opacity = 0;
-  // }
-  
-
-  // if (whyError !== '') {
-  //   whyLabel.style.color = 'red';
-  //   whyLabel.textContent = 'Razon - ' + whyError;
-  // } else {
-  //   whyLabel.style.color = '#fff';
-  //   whyLabel.textContent = '¿Por qué te gustaría ser voluntario?';
-  // }
-}
-
+var whyInput = document.getElementById('why_v');
+let whyInputError = document.getElementById('mensajeErrorWhy');
+whyInput.addEventListener('blur', function () {
+  whyValidation();
+});
 
 // VALIDACION DE NOMBRE
-
-
-
-function nameValidation(name) {
-  // var name = nameInput.value;
-  // var nameLabel = document.querySelector('label[for="name"]');
-  // let mensajeError = document.getElementById('mensajeError1');
-
+function nameValidation() {
+  var name = nameInput.value;
   var nameHasNumbers = /\d/.test(name);
   var nameHasSpecialChars = /[^\w\s]/.test(name);
 
   var nameError;
-
   if (name === '') {
-    nameError = 'Ingresa un nombre.';
+    nameError = 'Complete el campo.';
   } else if (nameHasNumbers) {
     nameError = 'No debe contener números.';
   } else if (nameHasSpecialChars) {
@@ -175,17 +93,77 @@ function nameValidation(name) {
     nameError = '';
   }
 
-  return nameError;
-  // if (nameError !== '') {
-  //   // nameLabel.style.color = 'red';
-  //   // nameLabel.textContent = 'Nombre y Apellido - ' + nameError;
-  //   mensajeError.textContent = nameError;
-  //   mensajeError.style.opacity = 1;
-  // } else{
-  //   mensajeError.style.opacity = 0;
-  // }
-  // else {
-  //   nameLabel.style.color = '#fff';
-  //   nameLabel.textContent = 'Nombre';
-  // }
+  if (nameError !== '') {
+    nameInputError.textContent = nameError;
+    nameInputError.classList.add('visible');
+  } else {
+    nameInputError.textContent = '';
+    nameInputError.classList.remove('visible');
+  }
+
+  fieldsVerification();
+}
+
+// VALIDACION DE PHONE
+function phoneValidation() {
+  var phone = phoneInput.value;
+  var phoneHasLetters = /[a-zA-Z]/.test(phone);
+  var phoneHasSpecialChars = /[^\w\s]/.test(phone);
+
+  var phoneError;
+  if (phone === '') {
+    phoneError = 'Complete el campo.';
+  } else if (phoneHasLetters) {
+    phoneError = 'No debe contener letras.';
+  } else if (phoneHasSpecialChars) {
+    phoneError = 'No debe contener caracteres especiales.';
+  } else {
+    phoneError = '';
+  }
+
+  if (phoneError !== '') {
+    phoneInputError.textContent = phoneError;
+    phoneInputError.classList.add('visible');
+  } else {
+    phoneInputError.textContent = '';
+    phoneInputError.classList.remove('visible');
+  }
+
+  fieldsVerification();
+}
+
+function whyValidation() {
+  var why = whyInput.value;
+  var whyError = why === '' ? 'Complete el campo.' : '';
+
+  if (whyError !== '') {
+    whyInputError.textContent = whyError;
+    whyInputError.classList.add('visible');
+  } else {
+    whyInputError.textContent = '';
+    whyInputError.classList.remove('visible');
+  }
+
+  fieldsVerification();
+}
+
+// VERIFICACION DE ERRORES PARA DESHABILITAR BOTON
+function fieldsVerification() {
+  var name = nameInput.value;
+  var phone = phoneInput.value;
+  var why = whyInput.value;
+  var button = document.querySelector('.boton_form');
+
+  var nameError = name === '' || nameInputError.classList.contains('visible');
+  var phoneError =
+    phone === '' || phoneInputError.classList.contains('visible');
+  var whyError = why === '' || whyInputError.classList.contains('visible');
+
+  if (nameError || phoneError || whyError) {
+    button.classList.add('disabled');
+    button.disabled = true;
+  } else {
+    button.classList.remove('disabled');
+    button.disabled = false;
+  }
 }

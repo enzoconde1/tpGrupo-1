@@ -699,18 +699,23 @@ footer img {
   outline: none;
 }
 
-
-.mensajeError{
-  color: red;
-  font-size: 15px;
+.mensajeError {
+  color: #d56c6c;
+  font-size: 16px;
+  font-weight: bold;
   opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.visible {
+  opacity: 1;
 }
 
 #container_voluntarios textarea {
   height: 79.56px;
 }
 
-#boton_form {
+.boton_form {
   width: 162px;
   height: 35px;
   border-radius: 3px;
@@ -724,8 +729,16 @@ footer img {
   margin-top: 25.44px;
 }
 
-#boton_form:hover {
+.boton_form:hover {
   opacity: 0.8;
+}
+
+.boton_form.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  color: gray;
 }
 
 @media (max-width: 500px) {
