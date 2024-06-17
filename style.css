@@ -121,6 +121,10 @@ nav ul {
   background-image: url(images/backgrounds/fondo-eventos.jpeg);
 }
 
+#banner_denuncias {
+  background-image: url(images/backgrounds/fondo-denuncias.jpeg);
+}
+
 .container_header {
   /* width: 30vw; */
   width: 535px;
