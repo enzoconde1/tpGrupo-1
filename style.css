@@ -325,7 +325,7 @@ footer img {
 #container_redes_footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
 }
 
 #redes_footer img {
