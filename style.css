@@ -1,19 +1,17 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
   color: #ffffff;
-  font-family:  'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #e4f3fb;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.container{
+.container {
   width: 100%;
   max-width: 85%;
   margin: 0 auto;
-
 }
 
 body h3 {
@@ -27,6 +25,15 @@ body h3 {
   text-align: center;
 }
 
+.subtitle h3 {
+  margin-block-end: 0;
+}
+
+.subtitle p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 html {
   font-size: 16px;
 
@@ -36,7 +43,7 @@ html {
 }
 
 /*header*/
-header{
+header {
   width: 100%;
   background-color: #00638c;
 }
@@ -47,15 +54,15 @@ nav {
   align-items: center;
   height: 80px;
 }
-#burger-icon{
+#burger-icon {
   display: none;
 }
-#burger-icon.active{
+#burger-icon.active {
   display: block;
 }
 
 nav img {
-  width:  78px;
+  width: 78px;
 }
 
 nav ul {
@@ -75,10 +82,8 @@ nav ul {
 .menu-item a {
   text-decoration: none;
   color: #ffffff;
-
-  
 }
-.menu-item a:hover{
+.menu-item a:hover {
   text-decoration: underline;
 }
 
@@ -94,19 +99,16 @@ nav ul {
   justify-content: center;
   font-weight: 500;
   border: 2px solid transparent;
-
 }
-#boton_adoptar:hover{
+#boton_adoptar:hover {
   border: 2px solid #d98729;
   background-color: transparent;
   color: #d98729;
-  
-
 }
 
 /*Banner index*/
 
-#banner_index {
+.banners {
   background-image: url(images/backgrounds/fondo-nosotros.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -121,15 +123,27 @@ nav ul {
   position: relative;
 }
 
+#banner_index {
+  background-image: url(images/backgrounds/fondo-nosotros.png);
+}
+
+#banner_eventos {
+  background-image: url(images/backgrounds/fondo-eventos.jpeg);
+}
+
+#banner_denuncias {
+  background-image: url(images/backgrounds/fondo-denuncias.jpeg);
+}
+
 .container_header {
   /* width: 30vw; */
   width: 535px;
 }
 
-.banners > div > h1{
+.banners > div > h1 {
   font-size: 48px;
 }
-.banners > div> p{
+.banners > div > p {
   font-size: 24px;
 }
 
@@ -141,19 +155,16 @@ nav ul {
 #redes_sociales {
   position: absolute;
   bottom: 64px;
-  right: 150px; 
-
+  right: 150px;
 }
 #redes_sociales > a {
   text-decoration: none;
-
 }
-#redes_sociales > a:hover{
+#redes_sociales > a:hover {
   opacity: 0.8;
 }
-#redes_sociales >a:nth-child(2){
+#redes_sociales > a:nth-child(2) {
   margin: 0 38px;
-  
 }
 
 #estadisticas {
@@ -459,4 +470,31 @@ footer img {
 
 .tarjeta_eventos button:hover {
   background-color: #0056b3;
+}
+
+#container_tarjetas_denuncias {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tarjeta_denuncias {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta_denuncias h3 {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.tarjeta_denuncias p {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.5;
 }
