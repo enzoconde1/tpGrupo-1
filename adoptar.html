@@ -1,82 +1,126 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TP Integrador - Grupo 1</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="container">
-          <a href="index.html">
-            <img src="images/logos/logo caballos.png" alt="logo" />
-          </a>
-          <ul>
-            <li class="menu-item"><a href="index.html">INICIO</a></li>
-            <li class="menu-item">
-              <a href="index.html#sobrenosotros">SOBRE NOSOTROS</a>
-            </li>
-            <li class="menu-item"><a href="denuncias.html">DENUNCIAS</a></li>
-            <li class="menu-item"><a href="eventos.html">EVENTOS</a></li>
-            <li class="menu-item" id="boton_donar">
-              <a href="index.html#colabora">DONAR</a>
-            </li>
-          </ul>
-          <a id="boton_adoptar" href="adoptar.html">ADOPTAR</a>
-          <a id="burger-icon"><img src="/images/icons/menu-icon.png" /></a>
-        </nav>
-      </header>
-  
+      <nav class="container">
+        <a href="index.html">
+          <img src="images/logos/logo caballos.png" alt="logo" />
+        </a>
+        <ul>
+          <li class="menu-item"><a href="index.html">INICIO</a></li>
+          <li class="menu-item">
+            <a href="index.html#sobrenosotros">SOBRE NOSOTROS</a>
+          </li>
+          <li class="menu-item"><a href="denuncias.html">DENUNCIAS</a></li>
+          <li class="menu-item"><a href="eventos.html">EVENTOS</a></li>
+          <li class="menu-item" id="boton_donar">
+            <a href="index.html#colabora">DONAR</a>
+          </li>
+        </ul>
+        <a id="boton_adoptar" href="adoptar.html">ADOPTAR</a>
+        <a id="burger-icon"><img src="/images/icons/menu-icon.png" /></a>
+      </nav>
+    </header>
 
     <div id="banner_adoptar" class="banners">
-
-        <div>
-            <h1>Adoptar</h1>
-            <p>Informate sobre cómo adoptar.</p>
-        </div>
-
+      <div>
+        <h1>Adoptar</h1>
+        <p>Informate sobre cómo adoptar.</p>
+      </div>
     </div>
 
     <main>
-
+      <div class="subtitle">
         <h3>Adopción de caballos</h3>
         <p>━━━━</p>
+      </div>
 
-        <div class="container_adopcion">
-            <p>Adoptar es dar una segunda oportunidad a estos hermosos animales que tanto han sufrido, que supimos rescatar y darle un estilo de vida digno. Con tu ayuda podemos lograr que todos encuentren un hogar donde no les falte nada y sean felices. Los animales también sienten.</p>
-            <div id="container_foto_form">
-                <img src="images/img_adoptar.jpeg" alt="img_adopcion">
-                <form>
-                    <label for="nombre">Nombre y Apellido</label>
-                    <input type="text">
-                    <label for="telefono">Teléfono</label>
-                    <input type="text">
-                    <label for="razon">¿Por qué querés adoptar un caballo?</label>
-                    <input type="text">
-                    <button type="submit">ENVIAR</button>
-                </form>
-            </div>
+      <div id="container_adopcion">
+        <p>
+          Adoptar es dar una segunda oportunidad a estos hermosos animales que
+          tanto han sufrido, que supimos rescatar y darle un estilo de vida
+          digno. Con tu ayuda podemos lograr que todos encuentren un hogar donde
+          no les falte nada y sean felices. Los animales también sienten.
+        </p>
+        <div id="container_foto_form">
+          <img src="images/img_adoptar.jpeg" alt="img_adopcion" />
+          <form id="form_voluntarios" action="/#container_voluntarios">
+            <label for="name">Nombre y Apellido:</label>
+            <input
+              type="text"
+              id="name_v"
+              name="name"
+              oninput="nameValidation()"
+            />
+            <span class="mensajeError" id="mensajeErrorName">
+              Complete el campo
+            </span>
+            <label for="phone">Teléfono :</label>
+            <input
+              type="text"
+              id="phone_v"
+              name="phone"
+              oninput="phoneValidation()"
+            />
+            <span class="mensajeError" id="mensajeErrorPhone">
+              Complete el campo
+            </span>
+            <label for="why">Por qué te gustaría ser voluntario?</label>
+            <textarea
+              id="why_v"
+              name="why"
+              oninput="whyValidation()"
+            ></textarea>
+
+            <span class="mensajeError" id="mensajeErrorWhy">
+              Complete el campo
+            </span>
+            <button type="submit" class="boton_form disabled">Enviar</button>
+          </form>
         </div>
-
+      </div>
     </main>
 
     <footer>
-        <div id="container_footer">
-            <div id="container_redes_footer">
-                <p>¡Si te gustaría saber más podés visitar nuestras redes sociales!</p>
-                <div id="redes_footer">
-                    <a href="https://x.com/caballosong"target="_blank"><img src="images/logos/twitter.png" alt="twitter"></a>
-                    <a href="https://www.instagram.com/caballosenlibertadlp/?hl=es"target="_blank"><img src="images/logos/instagram.png" alt="instagram"></a>
-                    <a href="https://www.facebook.com/caballos.enlibertad/"target="_blank"><img src="images/logos/facebook.png" alt="facebook"></a>
-                    <a href="https://api.whatsapp.com/send/?phone=5492216383686&text&type=phone_number&app_absent=0"target="_blank"><img src="images/logos/whatsapp.png" alt="whatsapp"></a>
-                </div>
-            </div>
-            <img src="images/logos/uade.png" alt="logo_uade">
+      <div id="container_footer">
+        <div id="container_redes_footer">
+          <p>
+            ¡Si te gustaría saber más podés visitar nuestras redes sociales!
+          </p>
+          <div id="redes_footer">
+            <a href="https://x.com/caballosong" target="_blank">
+              <img src="images/logos/twitter.png" alt="twitter" />
+            </a>
+            <a
+              href="https://www.instagram.com/caballosenlibertadlp/?hl=es"
+              target="_blank"
+            >
+              <img src="images/logos/instagram.png" alt="instagram" />
+            </a>
+            <a
+              href="https://www.facebook.com/caballos.enlibertad/"
+              target="_blank"
+            >
+              <img src="images/logos/facebook.png" alt="facebook" />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=5492216383686&text&type=phone_number&app_absent=0"
+              target="_blank"
+            >
+              <img src="images/logos/whatsapp.png" alt="whatsapp" />
+            </a>
+          </div>
         </div>
-        <p>2024 - Ⓡ CABALLOS EN LIBERTAD | Todos los derechos reservados</p>
+        <img src="images/logos/uade.png" alt="logo_uade" />
+      </div>
+      <p>2024 - Ⓡ CABALLOS EN LIBERTAD | Todos los derechos reservados</p>
     </footer>
-
-</body>
-
+    <script src="scriptFormulario.js" charset="UTF-8"></script>
+  </body>
 </html>
