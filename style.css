@@ -111,24 +111,25 @@ nav img {
   background-color: transparent;
   color: #d98729;
 }
-#adoptar1{display: none;}
+#adoptar1 {
+  display: none;
+}
 /*Media banner*/
 @media screen and (max-width: 900px) {
-  
   #burger-icon {
     display: block;
   }
-  header{
+  header {
     height: 70px;
   }
 
-  #adoptar1{
+  #adoptar1 {
     display: flex;
   }
-  #adoptar2{
+  #adoptar2 {
     display: none;
   }
-  #menu{
+  #menu {
     position: absolute;
     left: 0px;
     top: 69px;
@@ -141,7 +142,7 @@ nav img {
     height: auto;
     display: none;
   }
- #menu.active{
+  #menu.active {
     display: flex;
   }
   .menu-item {
@@ -596,9 +597,9 @@ footer img {
 
 #container_tarjetas_denuncias {
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex-box;
   gap: 20px;
+  justify-items: center;
 }
 
 .tarjeta_denuncias {
@@ -606,7 +607,11 @@ footer img {
   border: 1px solid #dddddd;
   border-radius: 8px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Establece un ancho fijo para cada tarjeta */
 }
 
 .tarjeta_denuncias h3 {
@@ -619,6 +624,11 @@ footer img {
   font-size: 1rem;
   color: #666666;
   line-height: 1.5;
+}
+
+.tarjeta_denuncias img {
+  height: 50px;
+  width: 50px;
 }
 
 /* Estilos para el popup */
