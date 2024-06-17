@@ -120,32 +120,62 @@
       </div>
 
       <div id="rescatados">
-        <h3>Ya rescatamos más de 500 caballos. Conocé sus historias</h3>
+        <h3>Ya rescatamos más de 500 caballos.</h3>
+        <h3>Conocé sus historias.</h3>
         <h3 class="divider">━━━━</h3>
         <div id="fotoscaballos">
-          <div class="image-container">
+          <div
+            class="image-container"
+            onclick="openPopupDescription('images/caballos/caballo_guerrero.jpeg', 'guerrero')"
+          >
             <img src="images/caballos/caballo_guerrero.jpeg" alt="guerrero" />
             <span class="caption">guerrero</span>
           </div>
-          <div class="image-container">
+          <div
+            class="image-container"
+            onclick="openPopupDescription('images/caballos/caballo_kenai.jpeg', 'kenai')"
+          >
             <img src="images/caballos/caballo_kenai.jpeg" alt="kenai" />
             <span class="caption">kenai</span>
           </div>
-          <div class="image-container">
+          <div
+            class="image-container"
+            onclick="openPopupDescription('images/caballos/caballo_magnolia.jpeg', 'magnolia')"
+          >
             <img src="images/caballos/caballo_magnolia.jpeg" alt="magnolia" />
             <span class="caption">magnolia</span>
           </div>
-          <div class="image-container">
+          <div
+            class="image-container"
+            onclick="openPopupDescription('images/caballos/caballo_chimy.jpeg', 'chimy')"
+          >
             <img src="images/caballos/caballo_chimy.jpeg" alt="chimy" />
             <span class="caption">chimy</span>
           </div>
-          <div class="image-container">
+          <div
+            class="image-container"
+            onclick="openPopupDescription('images/caballos/caballo_charles.jpeg', 'charles')"
+          >
             <img src="images/caballos/caballo_charles.jpeg" alt="charles" />
             <span class="caption">charles</span>
           </div>
-          <div class="image-container">
+          <div
+            class="image-container"
+            onclick="openPopupDescription('images/caballos/caballo_ocaso.jpeg', 'ocaso')"
+          >
             <img src="images/caballos/caballo_ocaso.jpeg" alt="ocaso" />
             <span class="caption">ocaso</span>
+          </div>
+        </div>
+
+        <div id="popup" class="popup">
+          <div class="popup-content-description">
+            <span class="close" id="closePopup">&times;</span>
+            <img id="popup-img" src="" alt="" />
+            <div id="description">
+              <h2 id="popup-caption" class="popup-caption"></h2>
+              <p id="popup-description" class="popup-description"></p>
+            </div>
           </div>
         </div>
         <p>
@@ -297,8 +327,10 @@
       </div>
 
       <div id="encontranos">
-        <h3 class="subtitle">Encontranos por acá</h3>
-        <h3 class="divider">━━━━</h3>
+        <div class="subtitle">
+          <h3>Encontranos por acá</h3>
+          <p>━━━━</p>
+        </div>
         <div id="container_mapa_texto">
           <div id="puntos_de_contacto">
             <div class="tarjeta_encontranos">
