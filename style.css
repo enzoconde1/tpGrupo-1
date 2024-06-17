@@ -258,12 +258,24 @@ nav ul {
 /*Colabora*/
 
 #colabora {
-  background-color: #c6eaff;
+  background-color: #E4F3FB;
   color: #00638c;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 488px;
+}
+#colabora > h2, #colabora > p{
+  text-align: center;
+}
+#colabora > h2 {
+  margin-top: 39px;
+}
+
+#colabora > p{
+  margin-bottom: 97px;
+}
+
+#colabora > .divider{
+  color: #00638c ;
+  
 }
 
 #container_colabora {
@@ -271,27 +283,34 @@ nav ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+
 }
 
-.tarjeta_colabora {
+.item_colabora{
+  width: 407px;
+  height: 138px;
+  border-radius: 6px;
+  border: 0.5px solid rgba(0, 0, 0, 0.10);
+  background-color: #fff;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e4f3fb;
-  border-radius: 1rem;
-  padding: 1rem;
+  cursor: pointer;
+}
+.item_colabora:first-child{
+  margin-right: 43px;
 }
 
-#container_pagos {
-  margin: 1rem;
+.item_colabora > img{
+  width: 185px;
+}
+.item_colabora > img:first-child{
+  width: 199px;
 }
 
-#container_pagos img {
-  height: 2rem;
-  width: auto;
-}
+
+
+
 
 #container_equipo {
   background-color: #c6eaff;
