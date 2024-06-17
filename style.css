@@ -49,24 +49,30 @@ html {
 header {
   width: 100%;
   background-color: #00638c;
+  height: 80px;
 }
+
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+
 }
 #burger-icon {
   display: none;
+  width: 45px;
+  height: 40px;
+  
 }
-#burger-icon.active {
-  display: block;
+#burger-icon > img{
+  width: 100%;
 }
 
 nav img {
   width: 78px;
 }
+
 
 nav ul {
   list-style: none;
@@ -107,6 +113,32 @@ nav ul {
   border: 2px solid #d98729;
   background-color: transparent;
   color: #d98729;
+}
+/*Media banner*/
+@media screen and  (max-width: 900px) {
+
+  header{
+    height: 70px;
+  }
+
+  #burger-icon {
+    display: block;
+    
+  }
+
+  nav > ul {
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    flex-direction: column;
+    background-color: #00638c;
+    z-index: 1;
+    width: 100%;
+    padding: 20px 0;
+  };
+  .menu-item{
+    display: block;
+  }
 }
 
 /*Banner index*/
