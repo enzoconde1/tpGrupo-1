@@ -831,4 +831,8 @@ footer img {
   .tarjeta_encontranos > p {
     font-size: 15px;
   }
+
+  #burger-icon {
+    display: block;
+  }
 }
