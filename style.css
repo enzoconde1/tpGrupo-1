@@ -140,7 +140,7 @@ nav img {
     margin: 0;
     padding: 20px 0;
     height: auto;
-    display: none;
+    
   }
   #menu.active {
     display: flex;
