@@ -108,3 +108,5 @@ function whyValitaion() {
     whyLabel.textContent = '¿Por qué te gustaría ser voluntario?';
   }
 }
+
+
