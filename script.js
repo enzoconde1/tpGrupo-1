@@ -64,12 +64,3 @@ window.onclick = function (event) {
     popupBanco.style.display = 'none';
   }
 };
-
-
-//Menú hamburguesa
-let burger = document.getElementById('burger-icon');
-let menu = document.getElementsByTagName('menu');
-
-burger.addEventListener('click', ()=>{
-  menu.classList.toggle("active");
-})

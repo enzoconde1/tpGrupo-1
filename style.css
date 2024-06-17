@@ -64,9 +64,11 @@ nav {
   width: 45px;
   height: 40px;
 }
-#burger-icon > img {
-  width: 100%;
+
+#burger-icon.rotate{
+  transform: rotate(90deg);
 }
+
 
 nav img {
   width: 78px;
@@ -140,7 +142,7 @@ nav img {
     margin: 0;
     padding: 20px 0;
     height: auto;
-    
+    display: none;
   }
   #menu.active {
     display: flex;
@@ -919,8 +921,8 @@ footer img {
   .tarjeta_encontranos > p {
     font-size: 15px;
   }
-
+/* 
   #burger-icon {
     display: block;
-  }
+  } */
 }
