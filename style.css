@@ -340,14 +340,14 @@ footer img {
 }
 
 .tarjeta_eventos img {
-  max-width: 250px; /* Tamaño de la imagen aumentado */
+  max-width: 250px;
   margin-right: 30px;
   border-radius: 10px;
 }
 
 .tarjeta_eventos div {
   flex-grow: 1;
-  text-align: left; /* Alineación del texto a la izquierda */
+  text-align: left;
 }
 
 .tarjeta_eventos h3 {
