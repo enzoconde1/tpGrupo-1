@@ -946,3 +946,17 @@ footer img {
     display: block;
   } */
 }
+
+
+
+@media screen and (max-width: 1166px) {
+  #estadisticas > p {
+    margin-right: 20px;
+  }
+}
+
+@media screeen and (max-width: 1150px){
+  #container_voluntarios{
+    
+  }
+}
