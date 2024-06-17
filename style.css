@@ -177,7 +177,7 @@ nav ul {
   height: 194px;
   /* gap: 3rem; */
 }
-#estadisticas > p{
+#estadisticas > p {
   font-size: 24px;
   width: 458px;
   text-align: center;
@@ -204,19 +204,17 @@ nav ul {
 /*Somos nosotros - idex*/
 
 #sobrenosotros {
-  background-color: #00638C;
-  color: #E4F3FB;
+  background-color: #00638c;
+  color: #e4f3fb;
   text-align: center;
   height: 437px;
 
-  padding: 4.25rem 7.125rem 0 ;
-  
+  padding: 4.25rem 7.125rem 0;
 }
-
 
 #rescatados {
   color: #00638c;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -225,8 +223,8 @@ nav ul {
   font-size: 24px;
 }
 
-#rescatados > .divider{
-  color: #00638c ;
+#rescatados > .divider {
+  color: #00638c;
   margin-bottom: 35px;
 }
 
@@ -234,48 +232,75 @@ nav ul {
   color: black;
   font-size: 20px;
   text-align: center;
-  maring-top: 30px;
+  margin-top: 30px;
   margin-bottom: 46px;
 }
 
 #fotoscaballos {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  gap: 1rem; /* Espacio entre las imágenes */
   margin-left: 20rem;
   margin-right: 20rem;
 }
 
-#fotoscaballos img {
-  height: 21.25rem;
+.image-container {
+  position: relative;
   width: 21.25rem;
+  height: 21.25rem;
 }
 
+#fotoscaballos img {
+  transition: filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#fotoscaballos img:hover {
+  filter: grayscale(100%);
+}
+
+/* Estilos para el texto del alt */
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Para evitar problemas de interacción con el texto */
+}
+
+.image-container:hover .caption {
+  opacity: 1;
+}
 
 /*Colabora*/
 
 #colabora {
-  background-color: #E4F3FB;
+  background-color: #e4f3fb;
   color: #00638c;
   height: 488px;
 }
-#colabora > h2, #colabora > p{
+#colabora > h2,
+#colabora > p {
   text-align: center;
 }
 #colabora > h2 {
   margin-top: 39px;
 }
 
-#colabora > p{
+#colabora > p {
   margin-bottom: 97px;
 }
 
-#colabora > .divider{
-  color: #00638c ;
-  
+#colabora > .divider {
+  color: #00638c;
 }
 
 #container_colabora {
@@ -283,80 +308,68 @@ nav ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
-.item_colabora{
+.item_colabora {
   width: 407px;
   height: 138px;
   border-radius: 6px;
-  border: 0.5px solid rgba(0, 0, 0, 0.10);
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.item_colabora:first-child{
+.item_colabora:first-child {
   margin-right: 43px;
 }
 
-.item_colabora > img{
+.item_colabora > img {
   width: 185px;
 }
-.item_colabora > img:first-child{
+.item_colabora > img:first-child {
   width: 199px;
 }
-
-
-
-
 
 #container_equipo {
   background-color: #c6eaff;
 }
 
- #container_areas {
+#container_areas {
   color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1rem;
   align-items: center;
-} 
+  padding-bottom: 20px;
+}
 
-.tarjeta_areas{
+.tarjeta_areas {
   width: 340px;
   height: 347px;
   border-radius: 10px;
-  border: 1.5px solid rgba(0, 99, 140, 0.40);
+  border: 1.5px solid rgba(0, 99, 140, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.area_icon{
+.area_icon {
   display: block;
   width: 70px;
   height: 70px;
-  background-color: #fff; 
+  background-color: #fff;
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 19px;
 }
-.area_icon > img{
+.area_icon > img {
   width: 46px;
   height: 46px;
-}
-
-
-#container_voluntarios {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 3rem;
 }
 
 /* .tarjeta_areas h3 {
@@ -543,4 +556,86 @@ footer img {
   font-size: 1rem;
   color: #666666;
   line-height: 1.5;
+}
+
+/* Estilos para el popup */
+.popup {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+}
+
+.popup p {
+  font-size: 1.25rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.popup-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 600px; /* Ancho máximo aumentado */
+  text-align: center;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#container_equipo {
+  padding-top: 40px;
+}
+#container_equipo > h2,
+#container_equipo > p {
+  color: #00638c;
+  text-align: center;
+}
+
+#container_voluntarios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 110px;
+}
+
+/* Estilos para el formulario */
+#container_voluntarios form {
+  background-color: blue; /* Color de fondo azul para el formulario */
+  padding: 40px; /* Espaciado interior para separar el contenido del borde */
+  vertical-align: top; /* Alineación vertical arriba para pegarse a la imagen */
+  margin: 0; /* Elimina el margen predeterminado del formulario */
+  max-width: 100%; /* Ajusta el ancho máximo del formulario al 100% del contenedor */
+  box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+}
+
+#container_voluntarios form label,
+#container_voluntarios form input[type='text'],
+#container_voluntarios form textarea {
+  width: calc(
+    100%
+  ); /* Ancho completo, considerando el padding de 20px a cada lado */
+  padding: 10px; /* Espaciado interior */
+  margin-bottom: 10px; /* Espaciado entre elementos */
+  border-radius: 5px; /* Redondeo de bordes */
+  box-sizing: border-box; /* Incluye el padding y border en el ancho total */
 }
