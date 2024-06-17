@@ -1,11 +1,13 @@
 // Obtener elementos
-var popup = document.getElementById('popup');
+var popupCaballos = document.getElementById('popup-caballos');
+var popupBanco = document.getElementById('popup-banco');
 var openPopup = document.getElementById('openPopup');
-var closePopup = document.getElementById('closePopup');
+var closePopupBanco = document.getElementById('closePopupBanco');
+var closePopupCaballos = document.getElementById('closePopupCaballos');
 
 // Abrir el popup al hacer clic en la imagen
 openPopup.onclick = function () {
-  popup.style.display = 'block';
+  popupBanco.style.display = 'block';
 };
 
 // Abrir el popup al hacer clic en la imagen
@@ -42,18 +44,24 @@ function openPopupDescription(imageSrc, horse) {
       'Está creciendo bello, sano, libre y fuerte, con energías para galopar junto a su compañera Teela.';
   }
 
-  document.getElementById('popup').style.display = 'block';
+  document.getElementById('popup-caballos').style.display = 'block';
 }
 
 // Cerrar el popup al hacer clic en la 'x'
-closePopup.onclick = function () {
-  popup.style.display = 'none';
+closePopupBanco.onclick = function () {
+  popupBanco.style.display = 'none';
+};
+closePopupCaballos.onclick = function () {
+  popupCaballos.style.display = 'none';
 };
 
 // Cerrar el popup al hacer clic fuera del contenido del popup
 window.onclick = function (event) {
-  if (event.target == popup) {
-    popup.style.display = 'none';
+  if (event.target == popupCaballos) {
+    popupCaballos.style.display = 'none';
+  }
+  if (event.target == popupBanco) {
+    popupBanco.style.display = 'none';
   }
 };
 
