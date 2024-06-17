@@ -7,6 +7,7 @@ body {
   background-color: #e4f3fb;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .container{
   width: 100%;
@@ -162,7 +163,14 @@ nav ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  height: 194px;
+  /* gap: 3rem; */
+}
+#estadisticas > p{
+  font-size: 24px;
+  width: 458px;
+  text-align: center;
+  margin-right: 149px;
 }
 
 #container_datos {
@@ -178,31 +186,45 @@ nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 110px;
+  padding-right: 20px;
 }
 
+/*Somos nosotros - idex*/
+
 #sobrenosotros {
-  background-image: url(images/backgrounds/fondo-sobrenosotros.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #ffffff;
+  background-color: #00638C;
+  color: #E4F3FB;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80px;
+  height: 437px;
+
+  padding: 4.25rem 7.125rem 0 ;
+  
 }
+
 
 #rescatados {
   color: #00638c;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 35px;
+  font-size: 24px;
+}
+
+#rescatados > .divider{
+  color: #00638c ;
+  margin-bottom: 35px;
 }
 
 #rescatados p {
   color: black;
+  font-size: 20px;
+  text-align: center;
+  maring-top: 30px;
+  margin-bottom: 46px;
 }
 
 #fotoscaballos {
@@ -211,14 +233,18 @@ nav ul {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
+
   margin-left: 20rem;
   margin-right: 20rem;
 }
 
 #fotoscaballos img {
-  height: 21rem;
-  width: 20rem;
+  height: 21.25rem;
+  width: 21.25rem;
 }
+
+
+/*Colabora*/
 
 #colabora {
   background-color: #c6eaff;
