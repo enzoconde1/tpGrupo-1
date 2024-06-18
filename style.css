@@ -744,7 +744,7 @@ footer img {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 110px;
+  padding-bottom: 20px;
   width: 1047.79px;
   margin: 0 auto;
 }
@@ -927,6 +927,7 @@ footer img {
     font-size: 20px;
   }
 
+  #container_foto_form,
   #container_voluntarios {
     display: flex;
     flex-direction: column;
@@ -984,5 +985,10 @@ footer img {
   .tarjeta_eventos img {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+
+  #container_adopcion > p {
+    width: auto;
+    font-size: 18px;
   }
 }
