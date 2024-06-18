@@ -587,14 +587,18 @@ footer img {
   font-size: 1.1em;
 }
 
-.tarjeta_eventos button {
-  background-color: #007bff;
+.enlace_evento{
+  background-color: #D98729;
   color: white;
   border: none;
-  padding: 12px 20px;
+  width: 150px;
+  display: block;
+  text-decoration: none;
+  padding: 12px 0px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.1em;
+  font-size: 17px;
+  text-align: center;
   margin-top: 15px;
 }
 
