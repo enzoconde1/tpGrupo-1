@@ -65,10 +65,9 @@ nav {
   height: 40px;
 }
 
-#burger-icon.rotate{
+#burger-icon.rotate {
   transform: rotate(90deg);
 }
-
 
 nav img {
   width: 78px;
@@ -271,6 +270,7 @@ nav img {
   justify-content: center;
   padding-top: 35px;
   font-size: 24px;
+  padding: 20px;
 }
 
 #rescatados > .divider {
@@ -289,11 +289,11 @@ nav img {
 }
 
 #fotoscaballos {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   gap: 1rem; /* Espacio entre las imágenes */
   margin-left: 17vw;
   margin-right: 17vw;
@@ -524,6 +524,7 @@ footer img {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 20px;
 }
 
 #container_redes_footer {
@@ -607,15 +608,13 @@ footer img {
   justify-items: center;
 } */
 
-#container_tarjetas_denuncias{
+#container_tarjetas_denuncias {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto 90px auto;
   width: 1200px;
-
-
 }
 
 .tarjeta_denuncias {
@@ -633,12 +632,12 @@ footer img {
   margin-top: 68px;
 }
 
-.tarjeta_denuncias:nth-child(2n){
+.tarjeta_denuncias:nth-child(2n) {
   margin-left: 200px;
 }
 .tarjeta_denuncias h3 {
   font-size: 24px;
-  color: #00638C;
+  color: #00638c;
   /* margin-bottom: 10px; */
   margin: 21px 0px;
 }
@@ -834,6 +833,17 @@ footer img {
 }
 
 @media (max-width: 500px) {
+  .container_header {
+    /* width: 30vw; */
+    width: auto;
+  }
+
+  #banner_index {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/backgrounds/fondo-nosotros.png);
+  }
+
   #estadisticas {
     flex-direction: column;
     align-items: center;
@@ -843,6 +853,13 @@ footer img {
 
   #estadisticas > p {
     margin-right: 0;
+    width: auto;
+  }
+
+  #redes_sociales {
+    display: flex;
+    flex-direction: row;
+    position: unset;
   }
 
   #container_datos {
@@ -887,6 +904,10 @@ footer img {
     align-items: center;
     margin-bottom: 10px;
   }
+  .item_colabora {
+    width: 300px;
+  }
+
   .item_colabora:first-child {
     margin-right: 0;
     margin-bottom: 5px;
@@ -943,23 +964,5 @@ footer img {
 
   .tarjeta_encontranos > p {
     font-size: 15px;
-  }
-/* 
-  #burger-icon {
-    display: block;
-  } */
-}
-
-
-
-@media screen and (max-width: 1166px) {
-  #estadisticas > p {
-    margin-right: 20px;
-  }
-}
-
-@media screeen and (max-width: 1150px){
-  #container_voluntarios{
-    
   }
 }
