@@ -869,6 +869,7 @@ footer img {
   }
 
   .datos {
+    padding-right: 0;
     margin: 10px 0; /* Espacio entre los elementos en modo columna */
   }
 
