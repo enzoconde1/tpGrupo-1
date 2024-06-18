@@ -602,13 +602,6 @@ footer img {
   background-color: #0056b3;
 }
 
-/* #container_tarjetas_denuncias {
-  padding: 20px;
-  display: flex-box;
-  gap: 20px;
-  justify-items: center;
-} */
-
 #container_tarjetas_denuncias {
   display: flex;
   justify-content: center;
@@ -966,5 +959,21 @@ footer img {
 
   .tarjeta_encontranos > p {
     font-size: 15px;
+  }
+
+  #container_tarjetas_denuncias {
+    width: auto;
+    padding: 20px;
+    margin: unset;
+  }
+
+  .tarjeta_denuncias {
+    width: auto;
+    margin-top: 20px;
+    height: 200px;
+  }
+
+  .tarjeta_denuncias:nth-child(2n) {
+    margin-left: 0;
   }
 }
