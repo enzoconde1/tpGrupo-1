@@ -976,4 +976,13 @@ footer img {
   .tarjeta_denuncias:nth-child(2n) {
     margin-left: 0;
   }
+
+  .tarjeta_eventos {
+    flex-direction: column;
+  }
+
+  .tarjeta_eventos img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
