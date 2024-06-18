@@ -220,6 +220,7 @@ nav img {
   justify-content: center;
   align-items: center;
   height: 194px;
+  padding: 20px;
   /* gap: 3rem; */
 }
 #estadisticas > p {
