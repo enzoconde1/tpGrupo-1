@@ -816,11 +816,19 @@ footer img {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 107.51px;
   width: 1047.79px;
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1113px){
+   #container_voluntarios{
+    flex-direction: column;
+    min-width: 400px;
+    max-width: 80%;
+
+  } 
+}
 /* Estilos para el formulario */
 #container_foto_form form,
 #container_voluntarios form {
@@ -832,6 +840,8 @@ footer img {
   box-sizing: border-box; /* Incluye el padding y border en el ancho total */
   width: 1047.79px;
 }
+
+
 
 #container_foto_form label,
 #container_voluntarios label {
