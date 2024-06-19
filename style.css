@@ -603,10 +603,11 @@ footer img {
   }
   .tarjeta_eventos > div > p, .tarjeta_eventos > div > h3{
     text-align: center;
-    width: 100% !important;
+    /* max-width: 90% !important;
+    margin: 10px auto; */
   }
   .tarjeta_eventos > div{
-    width: 100%;
+    max-width: 100%;
   }
   .enlace_evento{
     margin: 0 auto;
